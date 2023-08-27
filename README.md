@@ -1,1 +1,3 @@
-# SdkGenny.js
+# Builder.js
+
+`npm i @tangerie/builder.js`
