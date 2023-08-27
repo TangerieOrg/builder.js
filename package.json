@@ -1,0 +1,44 @@
+{
+  "name": "@tangerie/builder.js",
+  "version": "0.0.1",
+  "description": "",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.cjs",
+      "default": "./lib/index.modern.js"
+    }
+  },
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.module.js",
+  "umd": "./lib/index.umd.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TangerieOrg/builder.js.git"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "watch": "microbundle watch",
+    "validate": "tsc --noEmit",
+    "prepare": "npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "author": "Tangerie <josh.cavill01@gmail.com> (https://github.com/Tangerie)",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.197",
+    "@types/node": "^20.5.6",
+    "microbundle": "^0.15.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}
