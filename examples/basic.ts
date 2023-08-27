@@ -1,4 +1,4 @@
-import { CreateBuilder, IBuilder } from "../lib";
+import { CreateBuilder, IBuilder } from "../";
 
 type IParentObject = {
     name : string;
